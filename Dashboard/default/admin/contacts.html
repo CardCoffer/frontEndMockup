@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!--><html><!-- <![endif]-->
+<head>
+	<title>Card Coffer : Contacts</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	<link rel="stylesheet/less" href="../assets/less/admin/module.admin.page.contacts.less" />
+	-->
+	
+		<!--[if lt IE 9]><link rel="stylesheet" href="../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+	<link rel="stylesheet" href="../assets/css/admin/module.admin.page.contacts.min.css" />
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<script src="../assets/components/library/jquery/jquery.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v1.2.3"></script>
+<link rel="icon" type="image/png" href="../assets/tab-Icon.png"/>   
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="../assets/scripts/angular.js"></script>
+</head>
+<body class="" ng-init="LP=true" ng-app="ccApp" ng-controller="userController">
+<div class="navbar navbar-fixed-top navbar-primary main" role="navigation">
+    
+    <div class="navbar-header pull-left">
+        <div class="navbar-brand">
+            <div class="pull-left">
+                <a href="" class="toggle-button toggle-sidebar btn-navbar"><i class="fa fa-bars"></i></a>
+            </div>
+            <a href="index.html?lang=en" class="appbrand innerL"><img src="../assets/images/logo-text.png" style="width:200px;height:38px"></img></a>
+         </div>
+    </div>
+  
+     <ul class="nav navbar-nav navbar-right">
+        <li class=" hidden-xs">
+            <form class="navbar-form navbar-right " role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..."/>
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-inverse"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle user" data-toggle="dropdown"> <img src="../assets/images/people/8.jpg" alt="" class="img-circle" style="width:35px;height:35px"/><span class="hidden-xs hidden-sm"> &nbsp; Alireza Saberi </span> <span class="caret"></span></a>
+            <ul class="dropdown-menu list pull-right ">
+                <li><a href="#">Your Profile <i class="fa fa-user pull-right"></i></a></li>
+                <li><a href="#">Edit Account <i class="fa fa-pencil pull-right"></i></a></li>
+                <li><a href="#">Get Help <i class="fa fa-question-circle pull-right"></i></a></li>
+                <li><a href="#">Log out <i class="fa fa-sign-out pull-right"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+	<div id="menu" class="hidden-print hidden-xs">
+	<div class="sidebar sidebar-inverse">
+		<div class="user-profile media innerAll">
+            <a href="" class="pull-left"><img src="../assets/images/people/35/8.jpg" alt="" class="img-circle"><span class="badge badge-primary">4</span></a>
+			<div class="media-body">
+				<a href="" class="strong" ng-click="LP=ture">Alireza Saberi</a>
+				<p class="text-success"><i class="fa fa-fw fa-circle"></i ng-click="LP=ture"> Online</p>
+			</div>
+		</div>
+		<div class="sidebarMenuWrapper">
+			<ul class="list-unstyled">
+				<li>&nbsp</li>
+				<li><a href="dashboard.html"><i class=" icon-projector-screen-line"></i><span>Dashboard</span></a></li>
+				<li><a href="pricing_tables.html?lang=en"><i class="  icon-dollar"></i><span>Order a Card</span></a></li>
+				<li><a href="portfolio.html?lang=en"><i class=" icon-flip-camera-fill"></i><span>Card Studio</span></a></li>
+				<li class="active"><a href="contacts.html?lang=en"><i class="icon-group"></i><span>Stacks</span></a></li>
+                <br><br>
+			    <button class="btn btn-info" style="text-align:center; margin-left:50px" ng-click="LP=ture">
+                <i class="fa fa-sign-out"></i>
+                Singout</button>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+	<div id="content"><div class="heading-buttons bg-white border-bottom innerAll">
+	<h1 class="content-heading padding-none pull-left">Stack of Contacts</h1>
+	<div class="clearfix"></div>
+</div>
+	<div class="input-group input-lg ">
+	 	 <input type="text" class="form-control" placeholder="Search Contact">
+	  	<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
+	</div>
+
+<div class="innerAll spacing-x2">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/Mostafa.jpg" alt="" class="img-circle">
+                                 </div>
+                                <div class="innerAll">
+                                    <p class="lead strong margin-none">Mostafa Purmehdi</p><br>
+                                    <p>Ph.D. Marketing</p>
+                                    <p>Card Coffer</p>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">Mostafa Purmehdi</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp mostafa@cardcoffer.com
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp 514 570 8035
+                                 <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div>
+                                 <br>
+                                    <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/zohreh.jpg" alt="" class="img-circle" style="width:200px;height:200px">
+                                 </div>
+                                <div class="innerAll">
+                                    <p class="lead strong margin-none">Dr. Zohreh Sharafi</p><br>
+                                    <p>Postdoc in Computer Science</p>
+                                    <p>Stanford University</p>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">Zohreh Sharafi</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp zohreh@cardcoffer.com
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp 514 992 1364
+                                 <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div>
+                                 <br>
+                                    <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                 <div class="col-md-4 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/mahdi.jpg" alt="" class="img-circle" style="width:200px;height:200px">
+                                 </div>
+                                <div class="innerAll">
+                                    <p class="lead strong margin-none">Dr. Mahdi Milanifard</p><br>
+                                    <p>Research Scientist and Software Engineer</p>
+                                    <p>Google Research</p>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">Mahdi Milanifard</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp mahdi@cardcoffer.com
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp 650 123 1985
+                                 <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div>
+                                 <br>
+                                    <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div> 
+<div class="innerAll spacing-x2">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/bachir.jpg" alt="" class="img-circle" style="width:200px;height:200px">
+                                 </div>
+                                <div class="innerAll">
+                                    <p class="lead strong margin-none">Bachir Mouhyi</p><br>
+                                    <p>Junior Engineer, Traffic &amp Transportation analyst</p>
+                                    <p>AECOM</p>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">Bachir Mouhyi</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp bachir@cardcoffer.com
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp 514 574 4080
+                                 <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div>
+                                 <br>
+                                    <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/seb.jpg" alt="" class="img-circle" style="width:200px;height:200px">
+                                 </div>
+                                <div class="innerAll">
+                                    <p class="lead strong margin-none">Sébastien Binet</p><br>
+                                    <p>Founder and Owner</p>
+                                    <p>Innovations B4D</p>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">Sébastien Binet</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp sebastien@cardcoffer.com
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp 514 574 4080
+                                 <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div>
+                                 <br>
+                                    <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                 <div class="col-md-4 col-sm-6" ng-hide="LP">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/lp.jpg" alt="" class="img-circle" style="width:200px;height:200px">
+                                 </div>
+                                <div class="innerAll">
+                                    <p class="lead strong margin-none">LP Maurice</p><br>
+                                    <p>Co-founder &amp CEO</p>
+                                    <p>Busbud</p>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">LP Maurice</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp Maurice@cardcoffer.com
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp 514 666 6666
+                                 <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div>
+                                 <br>
+                                    <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>   
+<div class="innerAll spacing-x2">	
+	<div class="row row-merge">
+		
+							<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/1.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">First Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/2.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">Name Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/3.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">First Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/4.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">Name Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/5.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">First Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/6.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">Name Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/7.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">First Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/8.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">Name Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/9.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">First Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/10.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">Name Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/11.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">First Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/12.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">Name Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/13.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">First Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+						<div class="col-md-6 bg-white border-bottom ">
+			<div class="row">
+
+				<div class="col-sm-9">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="../assets//images/people/100/14.jpg" alt="...">
+						</a>
+						<div class="media-body innerAll half">
+							 <h4 class="media-heading padding-none"><a href="">Name Surname</a> </h4>
+							 <small class="text-success"><i class="fa fa-check"></i> Friend</small> 
+							 <p>Lives in Michigan, USA</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3 ">
+					<div class="innerAll half text-right">
+						<div class="innerT half">
+							<a href="" class="btn btn-info btn-xs"><i class="fa fa-thumbs-up"></i> Like</a>
+						</div>
+						<div class="innerT half">
+							<a href="" class="btn btn-primary btn-xs margin-top "><i class="fa fa-envelope-o"></i> Chat</a>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			
+		</div>
+					
+	</div>
+</div>
+
+	
+	
+		
+		</div>
+		<!-- // Content END -->
+		
+		<div class="clearfix"></div>
+		<!-- // Sidebar menu & content wrapper END -->
+		
+		<div id="footer" class="hidden-print">
+			
+			<!--  Copyright Line -->
+            <div class="copy">Copyright © 2015 - Developed by Ali R. Saberi - All Rights Reserved</div>
+
+			<!--  End Copyright Line -->
+	
+		</div>
+		<!-- // Footer END -->
+		
+	</div>
+	<!-- // Main Container Fluid END -->
+	
+
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#cb4040',
+		dangerColor = '#b55151',
+		infoColor = '#466baf',
+		successColor = '#8baf46',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/nicescroll/jquery.nicescroll.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/breakpoints/breakpoints.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/animations.init.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.main.init.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.collapse.init.js?v=v1.2.3"></script>
+<script src="../assets/components/helpers/themer/assets/plugins/cookie/jquery.cookie.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/core.init.js?v=v1.2.3"></script>	
+</body>
+</html>

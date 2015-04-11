@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!--><html><!-- <![endif]-->
+<head>
+	<title>Card Coffer: Card Studio</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	<link rel="stylesheet/less" href="../assets/less/admin/module.admin.page.portfolio.less" />
+	-->
+	
+		<!--[if lt IE 9]><link rel="stylesheet" href="../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+	<link rel="stylesheet" href="../assets/css/admin/module.admin.page.portfolio.min.css" />
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<script src="../assets/components/library/jquery/jquery.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v1.2.3"></script>
+<link rel="icon" type="image/png" href="../assets/tab-Icon.png"/>   
+<script src="angular.js"></script>	
+</head>
+<body ng-app="ccApp">
+
+		<div class="navbar navbar-fixed-top navbar-primary main" role="navigation">
+    
+    <div class="navbar-header pull-left">
+        <div class="navbar-brand">
+            <div class="pull-left">
+                <a href="" class="toggle-button toggle-sidebar btn-navbar"><i class="fa fa-bars"></i></a>
+            </div>
+            <a href="index.html?lang=en" class="appbrand innerL"><img src="../assets/images/logo-text.png" style="width:200px;height:38px"></img></a>
+        </div>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li class=" hidden-xs">
+            <form class="navbar-form navbar-right " role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..."/>
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-inverse"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle user" data-toggle="dropdown"> <img src="../assets/images/people/35/8.jpg" alt="" class="img-circle" style="width:35px;height:35px"/><span class="hidden-xs hidden-sm"> &nbsp; Alireza Saberi </span> <span class="caret"></span></a>
+            <ul class="dropdown-menu list pull-right ">
+                <li><a href="#">Your Profile <i class="fa fa-user pull-right"></i></a></li>
+                <li><a href="#">Edit Account <i class="fa fa-pencil pull-right"></i></a></li>
+                <li><a href="#">Get Help <i class="fa fa-question-circle pull-right"></i></a></li>
+                <li><a href="#">Log out <i class="fa fa-sign-out pull-right"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+	<div id="menu" class="hidden-print hidden-xs">
+	<div class="sidebar sidebar-inverse">
+		<div class="user-profile media innerAll">
+			<a href="" class="pull-left"><img src="../assets/images/people/35/8.jpg" alt="" class="img-circle"><span class="badge badge-primary">4</span></a>
+			<div class="media-body">
+				<a href="" class="strong">Alireza Saberi</a>
+				<p class="text-success"><i class="fa fa-fw fa-circle"></i> Online</p>
+			</div>
+		</div>
+        <div class="sidebarMenuWrapper">
+            <ul class="list-unstyled">
+                <li>&nbsp</li>
+                <li><a href="dashboard.html"><i class=" icon-projector-screen-line"></i><span>Dashboard</span></a></li>
+                <!--li class="hasSubmenu">
+                    <a href="#" data-target="#menu-style" data-toggle="collapse"><i class="icon-compose"></i><span>Menu &amp; Navbar</span></a>
+                    <ul class="collapse" id="menu-style">
+                        <li><a href="index.html?lang=en&amp;    sidebar_style=inverse"><span class="pull-right badge badge-primary"><i class="fa fa-check"></i></span>Sidebar Menu Dark</a></li>
+                        <li><a href="index.html?lang=en&amp;sidebar_style=default">Sidebar Menu Light</a></li>
+                        <li><a href="index.html?lang=en&amp;top_style=inverse">Top Menu Dark</a></li>
+                        <li><a href="index.html?lang=en&amp;top_style=default">Top Menu Light</a></li>
+                        <li><a href="index.html?lang=en&amp;top_style=primary"><span class="pull-right badge badge-primary"><i class="fa fa-check"></i></span>Top Menu Primary</a></li>
+                    </ul>
+                </li--> 
+                
+                <li><a href="pricing_tables.html?lang=en"><i class="  icon-dollar"></i><span>Order a Card</span></a></li>
+                <li class="active"><a href="portfolio.html?lang=en"><i class=" icon-flip-camera-fill"></i><span>Card Studio</span></a></li>
+                <li><a href="contacts.html?lang=en"><i class="icon-group"></i><span>Stacks</span></a></li>
+                
+            
+            </ul>
+            <br><br>
+            <button class="btn btn-info" style="text-align:center; margin-left:50px">
+                <i class="fa fa-sign-out"></i>
+                Singout</button>
+        </div>
+	</div>
+</div>
+
+
+
+
+<div id="content">
+	<div class="heading-buttons bg-white border-bottom innerAll">
+		<h1 class="content-heading padding-none pull-left">Card Studio</h1>
+		<div class="clearfix"></div>
+	</div>
+	<div class="innerAll spacing-x2">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                            	<div class="innerAll">
+                            		  <form role="form">
+										<div class="form-group">
+										  <label for="email">Full Name:</label>
+										  <input type="text" class="form-control" style="color:black" placeholder="Alireza Saberi" ng-model="user.name">
+										</div>
+										<div class="form-group">
+										  <label for="email">Title:</label>
+										  <input type="text" class="form-control" style="color:black" placeholder="PhD in Computer Scince" ng-model="title">
+										</div>
+										<div class="form-group">
+										  <label for="email">Affiliation:</label>
+										  <input type="text" class="form-control" style="color:black" placeholder="McGill" ng-model="Affiliation">
+										</div>
+										<div class="form-group">
+										  <label for="email">Phone Number:</label>
+										  <input type="text" class="form-control" style="color:black" placeholder="514 839 0936" ng-model="tel">
+										</div>
+										<div class="form-group">
+										  <label for="email">Fax Number:</label>
+										  <input type="text" class="form-control" style="color:black" placeholder="514 839 0936" ng-model="fax">
+										</div>
+										<div class="form-group">
+										  <label for="email">Email:</label>
+										  <input type="text" class="form-control" style="color:black" placeholder="ali@cardcoffer.com" ng-model="email">
+										</div>
+										</form>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Save &amp Flip</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll text-center" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">Social Networks:</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                             		  <form role="form">
+                             		  	<br>
+										<div class="form-group">
+										  &nbsp<i class="fa fa-twitter fa-2x"></i>
+										  <input type="text" class="form-control" style="color:black" placeholder="www.twitter.com" ng-model="tweeter">
+										</div>
+										<div class="form-group">
+										  &nbsp<i class="fa fa-linkedin fa-2x"></i>
+										  <input type="text" class="form-control" style="color:black" placeholder="www.linkedin.com" ng-model="linkedin">
+										</div>
+										<div class="form-group">
+										  &nbsp<i class="fa fa-facebook fa-2x"></i>
+										  <input type="text" class="form-control" style="color:black" placeholder="www.facebook.com" ng-model="fb">
+										</div>
+										<div class="form-group">
+										  &nbsp<i class="fa fa-pinterest fa-2x"></i>
+										  <input type="text" class="form-control" style="color:black" placeholder="www.pintrest.com" ng-model="pn">
+										</div>
+										</form>
+                            </div>
+                                    <div class="innerAll">
+                                    <button class="btn btn-default">
+                                    <span class="glyphicon glyphicon-repeat"></span>
+                                    Save &amp Flip</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget">
+                    	<!--img src="tiger.gif"-->
+                        <div class="widget-body padding-none" style="z-index:10">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/ali.jpg" alt="" class="img-circle" style="width:200px;height:200px">
+                                 </div>
+                                <div class="innerAll text-center">
+                                    <p class="lead strong margin-none">{{user.name}}</p><br>
+                                    <p>{{title}}</p>
+                                    <p>{{Affiliation}}</p>
+                                </div>
+                                <div class="innerAll text-center">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">{{name}}</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp {{email}}
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp {{tel}}
+                                 <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div>
+                                 <br>
+                                    <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </div> 
+
+
+<div class="innerAll spacing-x2">
+
+	<div class="innerB">
+	<button class="btn btn-inverse filter active" data-filter="mixit-filter-1">Filter 1</button>
+	<button class="btn btn-inverse filter" data-filter="mixit-filter-2">Filter 2</button>
+	<button class="btn btn-inverse filter" data-filter="all">Show all</button>
+</div>
+
+<div class="mixitup">
+	<div class="row">
+	<div class="col-md-4">
+		<img class="thumbnail" src="../assets/images/cinemagraph.gif" alt="photo" style="width:376px;height:200px"/>
+		<p>Descert</p>    
+	</div>
+	<div class="col-md-4">
+		<img class="thumbnail" src="../assets/images/tiger.gif" alt="photo" style="width:376px;height:200px"/>
+		<p>Tiger</p> 
+	</div>
+	<div class="col-md-4">
+		<img class="thumbnail" src="http://demo.mosaicpro.biz/assets/media/video/1.jpg" alt="photo" style="width:376px;height:200px"/>
+		<p>Cinemagraph</p>
+	</div>	
+	<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest active">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/59015141" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/1.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Public Sprinkler</h5>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/50522981" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/2.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">One More Beer!</h5>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/54932277" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/3.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Spacebound: Models &amp; Props</h5>
+	</div>
+	</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/4749536" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/4.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Alma</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest active">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/33670490" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/5.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">The Artists</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/8706167" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/6.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Les Dangereux</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/51478122" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/7.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Dum Spiro - HD</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/29573040" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/8.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">A Shadow of Blue</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/50540814" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/9.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">50 Jahre Orion</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/14989162" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/10.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">JOBS: THE BAKER</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/2480635" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/11.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Eatliz - Hey Animation</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/28355660" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/12.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Back to the Start</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+	
+	
+		
+		</div>
+		<!-- // Content END -->
+		
+		<div class="clearfix"></div>
+		<!-- // Sidebar menu & content wrapper END -->
+		
+		<div id="footer" class="hidden-print">
+			
+			<!--  Copyright Line -->
+            <div class="copy">Copyright © 2015 - Developed by Ali R. Saberi - All Rights Reserved</div>
+
+			<!--  End Copyright Line -->
+	
+		</div>
+		<!-- // Footer END -->
+		
+	</div>
+	<!-- // Main Container Fluid END -->
+	
+
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#cb4040',
+		dangerColor = '#b55151',
+		infoColor = '#466baf',
+		successColor = '#8baf46',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/nicescroll/jquery.nicescroll.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/breakpoints/breakpoints.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/animations.init.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/gallery/prettyphoto/assets/lib/js/jquery.prettyPhoto.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/gallery/prettyphoto/assets/custom/prettyphoto.init.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/mixitup/jquery.mixitup.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/mixitup/mixitup.init.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.main.init.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.collapse.init.js?v=v1.2.3"></script>
+<script src="../assets/components/helpers/themer/assets/plugins/cookie/jquery.cookie.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/core.init.js?v=v1.2.3"></script>	
+</body>
+</html>

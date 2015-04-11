@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!--><html><!-- <![endif]-->
+<head>
+	<title>Card Coffer: Pricing</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	<link rel="stylesheet/less" href="../assets/less/admin/module.admin.page.pricing_tables.less" />
+	-->
+	
+		<!--[if lt IE 9]><link rel="stylesheet" href="../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+	<link rel="stylesheet" href="../assets/css/admin/module.admin.page.pricing_tables.min.css" />
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<script src="../assets/components/library/jquery/jquery.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v1.2.3"></script>
+<link rel="icon" type="image/png" href="../assets/tab-Icon.png"/>
+<script src="../assets/scripts/angular.js"></script>
+</head>
+<body class="">
+
+
+    <div class="navbar navbar-fixed-top navbar-primary main" role="navigation">
+    
+    <div class="navbar-header pull-left">
+        <div class="navbar-brand">
+            <div class="pull-left">
+                <a href="" class="toggle-button toggle-sidebar btn-navbar"><i class="fa fa-bars"></i></a>
+            </div>
+            <a href="index.html?lang=en" class="appbrand innerL"><img src="../assets/images/logo-text.png" style="width:200px;height:38px"></img></a>
+        </div>
+    </div>
+  
+    <ul class="nav navbar-nav navbar-right">
+        <li class=" hidden-xs">
+            <form class="navbar-form navbar-right " role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..."/>
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-inverse"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle user" data-toggle="dropdown"> <img src="../assets/images/people/8.jpg" alt="" class="img-circle" style="width:35px;height:35px"/><span class="hidden-xs hidden-sm"> &nbsp; Alireza Saberi </span> <span class="caret"></span></a>
+            <ul class="dropdown-menu list pull-right ">
+                <li><a href="#">Your Profile <i class="fa fa-user pull-right"></i></a></li>
+                <li><a href="#">Edit Account <i class="fa fa-pencil pull-right"></i></a></li>
+                <li><a href="#">Get Help <i class="fa fa-question-circle pull-right"></i></a></li>
+                <li><a href="#">Log out <i class="fa fa-sign-out pull-right"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+	
+	<div id="menu" class="hidden-print hidden-xs">
+	<div class="sidebar sidebar-inverse">
+		<div class="user-profile media innerAll">
+			<a href="" class="pull-left"><img src="../assets/images/people/35/8.jpg" alt="" class="img-circle"><span class="badge badge-primary">4</span></a>
+			<div class="media-body">
+				<a href="" class="strong">Alireza Saberi</a>
+				<p class="text-success"><i class="fa fa-fw fa-circle"></i> Online</p>
+			</div>
+		</div>
+		<div class="sidebarMenuWrapper">
+			<ul class="list-unstyled">
+				<li>&nbsp</li>
+				<li><a href="dashboard.html"><i class=" icon-projector-screen-line"></i><span>Dashboard</span></a></li>
+				<li class="active"><a href="pricing_tables.html?lang=en"><i class="  icon-dollar"></i><span>Order a Card</span></a></li>
+				<li><a href="portfolio.html?lang=en"><i class=" icon-flip-camera-fill"></i><span>Card Studio</span></a></li>
+				<li><a href="contacts.html?lang=en"><i class="icon-group"></i><span>Stacks</span></a></li>
+			</ul>
+			<br><br>
+            <button class="btn btn-info" style="text-align:center; margin-left:50px">
+                <i class="fa fa-sign-out"></i>
+                Singout</button>
+		</div>
+	</div>
+</div>
+
+
+
+
+	<div id="content"><div class="heading-buttons bg-white border-bottom innerAll">
+	<h1 class="content-heading padding-none pull-left">Order a Card</h1>
+	<div class="clearfix"></div>
+</div>
+
+<div class="innerAll">
+
+
+		<div class="table-pricing-3">
+	<ul class="list-unstyled row">
+		<li class="col-md-4">
+			<div class="innerAll">
+				<h3>Starter</h3>
+				<div class="body">
+					<div class="price">
+						&dollar;36
+					</div>
+				</div>
+				<div class="features">
+					<ul>
+						<li>Per 100 business cards </li>
+						<li>Single side prints</li>
+						<li>Free Web and Mobile App</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="#" class="btn btn-success">Get Started</a>
+				</div>
+			</div>
+		</li>
+		<li class="col-md-4 active">
+			<div class="innerAll">
+				<h3>Silver</h3>
+				<div class="body">
+					<div class="price">
+						<span class="figure">&dollar;50</span>
+					</div>
+				</div>
+				<div class="features">
+					<ul>
+						<li>Per 150 business cards</li>
+						<li>Double side prints</li>
+						<li>Free Web and Mobile App</li>
+						<li>Ability to send promotions</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="#" class="btn btn-success">Get Started</a>
+				</div>
+			</div>
+		</li>
+		<li class="col-md-4">
+			<div class="innerAll">
+				<h3>Gold</h3>
+				<div class="body">
+					<div class="price">
+						<span class="figure">&dollar;60</span>
+					</div>
+				</div>
+				<div class="features">
+					<ul>
+						<li>Per 300 business cards</li>
+						<li>Double side prints</li>
+						<li>High quality papers</li>
+						<li>Free Web and Mobile App</li>
+						<li>Ability to send promotions</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="#" class="btn btn-success">Get Started</a>
+				</div>
+			</div>
+		</li>
+		<div class="clearfix"></div>
+	</ul>
+</div>
+
+		<!-- // Content END -->
+		
+		<div class="clearfix"></div>
+		<!-- // Sidebar menu & content wrapper END -->
+		
+		<div id="footer" class="hidden-print">
+			
+			<!--  Copyright Line -->
+            <div class="copy">Copyright © 2015 - Developed by Ali R. Saberi - All Rights Reserved</div>
+			<!--  End Copyright Line -->
+	
+		</div>
+		<!-- // Footer END -->
+		
+	</div>
+	<!-- // Main Container Fluid END -->
+	
+
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#cb4040',
+		dangerColor = '#b55151',
+		infoColor = '#466baf',
+		successColor = '#8baf46',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/nicescroll/jquery.nicescroll.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/breakpoints/breakpoints.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/animations.init.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.main.init.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.collapse.init.js?v=v1.2.3"></script>
+<script src="../assets/components/helpers/themer/assets/plugins/cookie/jquery.cookie.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/core.init.js?v=v1.2.3"></script>	
+</body>
+</html>
