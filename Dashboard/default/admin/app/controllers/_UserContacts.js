@@ -2,8 +2,8 @@
     
     var ContactsController = function ($scope) {
         $scope.contacts = {
-        "DrrZNtnAuy" :{
-        "avatar": "../assests/images/people/guUHjhx8wE.jpg",
+        "Mostafa" :{
+        "avatar": "../assets/images/people/Mostafa.jpg",
         "backgroundColor": "white",
         "name": "Mostafa Purmehdi",
         "jobtitle": "Ph.D. Marketing",
@@ -17,9 +17,9 @@
         "googleplus": "",
         "miniresume": "Businessman",
         "parent": "guUHjhx8wE"
-         },
-        "i1OOfskc9p" :{
-        "avatar": "../assests/images/people/i1OOfskc9p.jpg",
+        },
+        "Zohreh" :{
+        "avatar": "../assets/images/people/zohreh.jpg",
         "backgroundColor": "white",
         "name": "Dr. Zohreh Sharafi",
         "jobtitle": "Postdoc in Computer Science",
@@ -34,8 +34,8 @@
         "miniresume": "PhD in CS",
         "parent": "NlPjdF5yK2"
          },
-        "pv3NeClPkb" :{
-        "avatar": "../assests/images/people/pv3NeClPkb.jpg",
+        "Mahdi" :{
+        "avatar": "../assets/images/people/mahdi.jpg",
         "backgroundColor": "white",
         "name": "Dr. Mahdi Milani Fard",
         "jobtitle": "Research Scientist and Software Engineer",
@@ -50,8 +50,8 @@
         "miniresume": "Supersmart!",
         "parent": "guUHjhx8wE"
          },
-        "DrrZNtnAuy" :{
-        "avatar": "../assests/images/people/guUHjhx8wE.jpg",
+        "Bachir" :{
+        "avatar": "../assets/images/people/bachir.jpg",
         "backgroundColor": "white",
         "name": "Bachir Mouhyi",
         "jobtitle": "Junior Engineer, Traffic & Transportation analyst",
@@ -66,8 +66,8 @@
         "miniresume": "Intrested guy with a big mouth!",
         "parent": "guUHjhx8wE"
          },
-        "DrrZNtnA77" :{
-        "avatar": "../assests/images/people/guUHjhx8wE.jpg",
+        "Sebastian" :{
+        "avatar": "../assets/images/people/seb.jpg",
         "backgroundColor": "white",
         "name": "Sébastien Binet",
         "jobtitle": "Founder and Owner",
@@ -85,7 +85,7 @@
         };
     };
     
-    userController.$inject = ['$scope'];
+    ContactsController.$inject = ['$scope'];
 
     angular.module('ccApp')
       .controller('ContactsController', ContactsController);
