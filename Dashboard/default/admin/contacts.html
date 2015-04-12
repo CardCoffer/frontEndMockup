@@ -108,13 +108,12 @@
 	<div class="clearfix"></div>
 </div>
 	<div class="input-group input-lg ">
-	 	 Search: <input type="text" class="form-control" placeholder="Search Contact">
+	 	 <input type="text" ng-model="searchText" class="form-control" placeholder="Search Contact">
 	  	<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
 	</div>
-
 <div class="innerAll spacing-x2" ng-controller="ContactsController">
     <div class="row">
-        <div class="col-md-4 col-sm-6" ng-repeat="con in contacts">
+        <div class="col-md-4 col-sm-6" ng-repeat="con in contacts | filter:searchText">
             <div class="panel-3d">
                 <div class="front">
 
@@ -159,7 +158,8 @@
                                         <i class="fa fa-twitter fa-2x"></i> &nbsp
                                         <i class="fa fa-linkedin fa-2x"></i>&nbsp
                                         <i class="fa fa-facebook fa-2x"></i>&nbsp
-                                        <i class="fa fa-pinterest fa-2x"></i>
+                                        <i class="fa fa-pinterest fa-2x"></i>&nbsp
+                                        <i class="fa fa-google-plus fa-2x"></i>
                                 </div>
                             </div>
                         </div>
