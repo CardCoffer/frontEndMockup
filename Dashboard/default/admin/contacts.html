@@ -103,17 +103,18 @@
 
 
 
-	<div id="content"><div class="heading-buttons bg-white border-bottom innerAll">
-	<h1 class="content-heading padding-none pull-left">Stack of Contacts</h1>
-	<div class="clearfix"></div>
-</div>
+	<div id="content">
+        <div class="heading-buttons bg-white border-bottom innerAll">
+        	<h1 class="content-heading padding-none pull-left">Stack of Contacts</h1>
+        	<div class="clearfix"></div>
+        </div>
 	<div class="input-group input-lg ">
 	 	 <input type="text" ng-model="searchText" class="form-control" placeholder="Search Contact">
 	  	<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
 	</div>
 <div class="innerAll spacing-x2" ng-controller="ContactsController">
     <div class="row">
-        <div class="col-md-4 col-sm-6" ng-repeat="con in contacts | filter:searchText">
+        <div class="col-md-4 col-sm-6" ng-repeat="con in contacts">
             <div class="panel-3d">
                 <div class="front">
 
