@@ -1,8 +1,13 @@
 (function() {
     
     var ContactsController = function ($scope) {
-        $scope.contacts = {
-        "Mostafa" :{
+        $scope.isActive = function(contacts) {
+            return contacts.User.Stats[0].active === "1";
+        };
+        
+        $scope.contacts = [
+        {
+        "ID": "Mostafa",  
         "avatar": "../assets/images/people/Mostafa.jpg",
         "backgroundColor": "white",
         "name": "Mostafa Purmehdi",
@@ -18,7 +23,8 @@
         "miniresume": "Businessman",
         "parent": "guUHjhx8wE"
         },
-        "Zohreh" :{
+        {
+        "ID":"Zohreh", 
         "avatar": "../assets/images/people/zohreh.jpg",
         "backgroundColor": "white",
         "name": "Dr. Zohreh Sharafi",
@@ -34,7 +40,8 @@
         "miniresume": "PhD in CS",
         "parent": "NlPjdF5yK2"
          },
-        "Mahdi" :{
+        {
+        "ID":"Mahdi",
         "avatar": "../assets/images/people/mahdi.jpg",
         "backgroundColor": "white",
         "name": "Dr. Mahdi Milani Fard",
@@ -50,7 +57,8 @@
         "miniresume": "Supersmart!",
         "parent": "guUHjhx8wE"
          },
-        "Bachir" :{
+        {
+        "ID":"Bachir",
         "avatar": "../assets/images/people/bachir.jpg",
         "backgroundColor": "white",
         "name": "Bachir Mouhyi",
@@ -66,7 +74,8 @@
         "miniresume": "Intrested guy with a big mouth!",
         "parent": "guUHjhx8wE"
          },
-        "Sebastian" :{
+        {
+        "ID":"Sebastian",
         "avatar": "../assets/images/people/seb.jpg",
         "backgroundColor": "white",
         "name": "Sébastien Binet",
@@ -82,7 +91,7 @@
         "miniresume": "Hardware guy!",
         "parent": "guUHjhx8wE"
          }       
-        };
+        ];
     };
     
     ContactsController.$inject = ['$scope'];

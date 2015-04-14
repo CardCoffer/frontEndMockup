@@ -103,18 +103,24 @@
 
 
 
-	<div id="content">
+	<div id="content" ng-controller="ContactsController">
         <div class="heading-buttons bg-white border-bottom innerAll">
         	<h1 class="content-heading padding-none pull-left">Stack of Contacts</h1>
         	<div class="clearfix"></div>
         </div>
-	<div class="input-group input-lg ">
-	 	 <input type="text" ng-model="searchText" class="form-control" placeholder="Search Contact">
-	  	<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
-	</div>
-<div class="innerAll spacing-x2" ng-controller="ContactsController">
-    <div class="row">
-        <div class="col-md-4 col-sm-6" ng-repeat="con in contacts">
+    	<div class="input-group input-lg">
+    	 	 <input type="text" ng-model="cardFilter" class="form-control" placeholder="Search Contact">
+    	  	<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
+    	</div>
+        <div class="innerAll spacing-x2">
+        <!--table for test>
+            <tr ng-repeat="con in contacts|filter:cardFilter">
+                <td>{{con.ID | uppercase}}</td>
+            </tr>
+        </table for test-->
+        <div class="row">
+            <div class="col-md-4 col-sm-6" ng-repeat="con in contacts|filter:cardFilter">
+
             <div class="panel-3d">
                 <div class="front">
 
@@ -125,6 +131,7 @@
                                     <img ng-src={{con.avatar}} alt="" class="img-circle" width="150" height="150">
                                  </div>
                                 <div class="innerAll">
+                                    <!--p>{{cardFilter}}</p-->
                                     <p class="lead strong margin-none">{{con.name}}</p><br>
                                     <p>{{con.jobtitle}}</p>
                                     <p>{{con.affiliation}}</p>
@@ -166,6 +173,10 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
 
@@ -179,7 +190,7 @@
 		<div id="footer" class="hidden-print">
 			
 			<!--  Copyright Line -->
-            <div class="copy">Copyright © 2015 - Developed by Ali R. Saberi - All Rights Reserved</div>
+            <div class="copy">Copyright &copy 2015 - Developed by Ali R. Saberi - All Rights Reserved</div>
 
 			<!--  End Copyright Line -->
 	
