@@ -103,7 +103,7 @@
 
 
 
-	<div id="content" ng-controller="ContactsController">
+	<div id="content" ng-controller="ContactsController" class="container">
         <div class="heading-buttons bg-white border-bottom innerAll">
         	<h1 class="content-heading padding-none pull-left">Stack of Contacts</h1>
         	<div class="clearfix"></div>
@@ -112,7 +112,8 @@
     	 	 <input type="text" ng-model="cardFilter" class="form-control" placeholder="Search Contact">
     	  	<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
     	 </div>
-    	 <div>
+    	 <div class="row">
+            <div class="col-md-offset-1">
     	 	 <span class="label label-default">Reset</span>
 	    	 <span class="label label-primary">Name</span>
 	    	 <span class="label label-success">Job Title</span>
@@ -122,6 +123,7 @@
 	    	 <span class="label label-success">Fax</span>
 	    	 <span class="label label-info">Note</span>
 	    	 <div class="innerAll spacing-x2">
+         </div>   
 	    </div>	 	
         <!--table for test>
             <tr ng-repeat="con in contacts|filter:cardFilter">
