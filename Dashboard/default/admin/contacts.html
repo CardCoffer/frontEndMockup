@@ -111,8 +111,18 @@
     	<div class="input-group input-lg">
     	 	 <input type="text" ng-model="cardFilter" class="form-control" placeholder="Search Contact">
     	  	<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
-    	</div>
-        <div class="innerAll spacing-x2">
+    	 </div>
+    	 <div>
+    	 	 <span class="label label-default">Reset</span>
+	    	 <span class="label label-primary">Name</span>
+	    	 <span class="label label-success">Job Title</span>
+	    	 <span class="label label-info">Affiliation</span>
+	    	 <span class="label label-warning">Email</span>
+	    	 <span class="label label-danger">Phone</span>
+	    	 <span class="label label-success">Fax</span>
+	    	 <span class="label label-info">Note</span>
+	    	 <div class="innerAll spacing-x2">
+	    </div>	 	
         <!--table for test>
             <tr ng-repeat="con in contacts|filter:cardFilter">
                 <td>{{con.ID | uppercase}}</td>
