@@ -4,7 +4,12 @@
         $scope.isActive = function(contacts) {
             return contacts.User.Stats[0].active === "1";
         };
-        
+        $scope.sortBy = null;
+        $scope.reverse = false;
+        $scope.doSort = function(propName){
+            $scope.sortBy = propName;
+            $scope.reverse = ! $scope.reverse;
+        };
         $scope.contacts = [
         {
         "ID": "Mostafa",  
@@ -15,12 +20,13 @@
         "affiliation": "HEC Montreal",
         "address": "Montreal, Canada",
         "phone": "5145708035",
+        "fax":"5148390936",
         "email": "purmehdi@gmail.com",
         "facebook": "", 
         "twitter": "", 
         "linkedin": "", 
         "googleplus": "",
-        "miniresume": "Businessman",
+        "note": "Businessman",
         "parent": "guUHjhx8wE"
         },
         {
@@ -32,12 +38,13 @@
         "affiliation": "Stanford University",
         "address": "Montreal, Canada",
         "phone": "5149921364",
+        "fax":"5148390936",
         "email": "zohreh@cardcoffer.com",
         "facebook": "", 
         "twitter": "", 
         "linkedin": "", 
         "googleplus": "",
-        "miniresume": "PhD in CS",
+        "note": "PhD in CS",
         "parent": "NlPjdF5yK2"
          },
         {
@@ -49,12 +56,13 @@
         "affiliation": "Google Research",
         "address": "Mountainview, USA",
         "phone": "650 123 1985",
+        "fax":"5148390936",
         "email": "mahdi@cardcoffer.com",
         "facebook": "", 
         "twitter": "", 
         "linkedin": "", 
         "googleplus": "",
-        "miniresume": "Supersmart!",
+        "note": "Supersmart!",
         "parent": "guUHjhx8wE"
          },
         {
@@ -66,12 +74,13 @@
         "affiliation": "AECOM",
         "address": "Montreal, Canada",
         "phone": "514 574 4080",
+        "fax":"5148390936",
         "email": "bachir@cardcoffer.com",
         "facebook": "", 
         "twitter": "", 
         "linkedin": "", 
         "googleplus": "",
-        "miniresume": "Intrested guy with a big mouth!",
+        "note": "Intrested guy with a big mouth!",
         "parent": "guUHjhx8wE"
          },
         {
@@ -83,12 +92,13 @@
         "affiliation": "Innovations B4D",
         "address": "Montreal, Canada",
         "phone": "514 574 4080",
+        "fax":"5148390936",
         "email": "sebastien@cardcoffer.com",
         "facebook": "", 
         "twitter": "", 
         "linkedin": "", 
         "googleplus": "",
-        "miniresume": "Hardware guy!",
+        "note": "Hardware guy!",
         "parent": "guUHjhx8wE"
          }       
         ];
