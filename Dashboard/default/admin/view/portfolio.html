@@ -1,0 +1,343 @@
+<div id="content" ng-controller="userCardController">
+	<div class="heading-buttons bg-white border-bottom innerAll">
+		<h1 class="content-heading padding-none pull-left">Card Studio</h1>
+		<div class="clearfix"></div>
+	</div>
+	<div class="innerAll spacing-x2">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget text-center">
+                        <div class="widget-body padding-none">
+                            <div>
+                            	<div class="innerAll">
+                            		  <form role="form">
+										<div class="form-group">
+										  <label for="email">Full Name:</label>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.name">
+										</div>
+										<div class="form-group">
+										  <label for="email">Title:</label>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.jobtitle">
+										</div>
+										<div class="form-group">
+										  <label for="email">Affiliation:</label>
+										  <input type="text" class="form-control" style="color:black" placeholder="McGill" ng-model="card.AliSabCard1.affiliation">
+										</div>
+										<div class="form-group">
+										  <label for="email">Phone Number:</label>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.phone">
+										</div>
+										<div class="form-group">
+										  <label for="email">Fax Number:</label>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.fax">
+										</div>
+										<div class="form-group">
+										  <label for="email">Email:</label>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.email">
+										</div>
+                                        <div class="form-group">
+                                          <i class="fa fa-globe">&nbsp</i><label for="email">Personal Webpage:</label>
+                                          <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.webpage">
+                                        </div>
+										</form>
+                                </div>
+                                <div class="innerAll">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Save &amp Flip</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll text-center" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">Social Networks:</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                             		  <form role="form">
+                             		  	<br>
+										<div class="form-group">
+										  &nbsp<i class="fa fa-twitter fa-2x"></i>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.twitter">
+										</div>
+										<div class="form-group">
+										  &nbsp<i class="fa fa-linkedin fa-2x"></i>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.linkedin">
+										</div>
+										<div class="form-group">
+										  &nbsp<i class="fa fa-facebook fa-2x"></i>
+										  <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.facebook">
+										</div>
+                                        <div class="form-group">
+                                          &nbsp<i class="fa fa-google-plus fa-2x"></i>
+                                          <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.googleplus">
+                                        </div>
+                                        <div class="form-group">
+                                          &nbsp<i class="fa fa-pinterest fa-2x"></i>
+                                          <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.pinterest">
+                                        </div>
+                                        <div class="form-group">
+                                          <i class="fa fa-home fa-2x"></i>&nbsp Address
+                                          <input type="text" class="form-control" style="color:black" ng-model="card.AliSabCard1.address">
+                                        </div>
+										</form>
+                            </div>
+                                    <div class="innerAll">
+                                    <button class="btn btn-default">
+                                    <span class="glyphicon glyphicon-repeat"></span>
+                                    Save &amp Flip</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-6">
+            <div class="panel-3d">
+                <div class="front">
+
+                    <div class="widget">
+                    	<!--img src="tiger.gif"-->
+                        <div class="widget-body padding-none" style="z-index:10">
+                            <div>
+                                <div class="innerAll bg-default">
+                                    <img src="../assets/images/people/ali.jpg" alt="" class="img-circle" style="width:200px;height:200px">
+                                 </div>
+                                <div class="innerAll text-center">
+                                    <p class="lead strong margin-none">{{card.AliSabCard1.name}}</p><br>
+                                    <p>{{card.AliSabCard1.jobtitle}}</p>
+                                    <p>{{card.AliSabCard1.affiliation}}</p>
+                                    <p><i class="fa fa-globe">&nbsp</i>{{card.AliSabCard1.webpage}}</p>
+                                </div>
+                                <div class="innerAll text-center">
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                        Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <div class="widget widget-inverse widget-scroll" data-scroll-height="165px">
+                        <div class="widget-head">
+                            <button class="btn btn-xs btn-default pull-right"><i class="fa fa-times"></i></button>
+                            <h4 class="heading">{{card.AliSabCard1.name}}</h4>
+                        </div>
+                        <div class="widget-body padding-none">
+                            <div>
+                                <div class="box-generic border-none text-center">
+                                    <i class="fa fa-envelope-o fa-2x"></i></i>&nbsp {{card.AliSabCard1.email}}
+                                    <br><br>
+                                    <i class="fa fa-phone fa-2x" style="text-align:justify"></i>&nbsp {{card.AliSabCard1.phone}}
+                                    <br><br>
+                                    <i class="fa fa-fax fa-2x" style="text-align:justify"></i>&nbsp 514 888 0000
+                                    <br><br>
+                                    <i class="fa fa-globe fa-2x" style="text-align:justify"></i>&nbsp {{card.AliSabCard1.address}}
+                                    <br><br>
+                                 <!--div class="innerAll bg-default">
+                                    <img src="../assets/images/people/144x144.png">
+                                 </div-->
+                                <dix>
+                                        <i class="fa fa-twitter fa-2x"></i> &nbsp
+                                        <i class="fa fa-linkedin fa-2x"></i>&nbsp
+                                        <i class="fa fa-facebook fa-2x"></i>&nbsp
+                                        <i class="fa fa-google-plus fa-2x"></i>&nbsp
+                                        <i class="fa fa-pinterest fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </div> 
+
+
+<div class="innerAll spacing-x2">
+
+	<div class="innerB">
+	<button class="btn btn-inverse filter active" data-filter="mixit-filter-1">Filter 1</button>
+	<button class="btn btn-inverse filter" data-filter="mixit-filter-2">Filter 2</button>
+	<button class="btn btn-inverse filter" data-filter="all">Show all</button>
+</div>
+
+<div class="mixitup">
+	<div class="row">
+	<div class="col-md-4">
+		<img class="thumbnail" src="../assets/images/cinemagraph.gif" alt="photo" style="width:376px;height:200px"/>
+		<p>Descert</p>    
+	</div>
+	<div class="col-md-4">
+		<img class="thumbnail" src="../assets/images/tiger.gif" alt="photo" style="width:376px;height:200px"/>
+		<p>Tiger</p> 
+	</div>
+	<div class="col-md-4">
+		<img class="thumbnail" src="http://demo.mosaicpro.biz/assets/media/video/1.jpg" alt="photo" style="width:376px;height:200px"/>
+		<p>Cinemagraph</p>
+	</div>	
+	<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest active">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/59015141" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/1.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Public Sprinkler</h5>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/50522981" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/2.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">One More Beer!</h5>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/54932277" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/3.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Spacebound: Models &amp; Props</h5>
+	</div>
+	</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/4749536" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/4.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Alma</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest active">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/33670490" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/5.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">The Artists</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/8706167" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/6.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Les Dangereux</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/51478122" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/7.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Dum Spiro - HD</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/29573040" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/8.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">A Shadow of Blue</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/50540814" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/9.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">50 Jahre Orion</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/14989162" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/10.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">JOBS: THE BAKER</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-1 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/2480635" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/11.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Eatliz - Hey Animation</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+				<div class="mixit-filter-2 mix col-md-4">
+	<div class="widget bg-none widget-pinterest">
+		<div class="widget-body bg-none padding-none">
+			<a href="http://vimeo.com/28355660" data-toggle="prettyPhoto" class="thumb overflow-hidden" data-height="150">
+				<img src="http://demo.mosaicpro.biz/assets/media/video/12.jpg" alt="photo" />
+			</a>
+			<div class="description bg-white overflow-hidden" data-height="130">
+				<h5 class="text-uppercase">Back to the Start</h5>
+				</div>
+		</div>
+	</div>
+	</div>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+

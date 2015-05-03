@@ -5,25 +5,24 @@
 <!--[if gt IE 8]> <html> <![endif]-->
 <!--[if !IE]><!--><html><!-- <![endif]-->
 <head>
-	<title>Card Coffer: Pricing</title>
-	
+	<title>Card Coffer: Dashboard</title>
 	<!-- Meta -->
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-	
+	<meta name="description" content="Card Coffer Dashboard is for user for get some global information about his business card">
 	<!-- 
 	**********************************************************
 	In development, use the LESS files and the less.js compiler
 	instead of the minified CSS loaded by default.
 	**********************************************************
-	<link rel="stylesheet/less" href="../assets/less/admin/module.admin.page.pricing_tables.less" />
+	<link rel="stylesheet/less" href="../assets/less/admin/module.admin.page.index.less" />
 	-->
 	
 		<!--[if lt IE 9]><link rel="stylesheet" href="../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
-	<link rel="stylesheet" href="../assets/css/admin/module.admin.page.pricing_tables.min.css" />
+	<link rel="stylesheet" href="../assets/css/admin/module.admin.page.index.min.css" />
 	
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,13 +36,13 @@
 <script src="../assets/components/plugins/less-js/less.min.js?v=v1.2.3"></script>
 <script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v1.2.3"></script>
 <script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v1.2.3"></script>
-<link rel="icon" type="image/png" href="../assets/tab-Icon.png"/>
-<script src="../assets/scripts/angular.js"></script>
+<script src="../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v1.2.3"></script>
 </head>
-<body class="">
 
+<body ng-app="ccApp" ng-controller="userController">
 
-    <div class="navbar navbar-fixed-top navbar-primary main" role="navigation">
+	<div class="navbar navbar-fixed-top navbar-primary main" role="navigation">
     
     <div class="navbar-header pull-left">
         <div class="navbar-brand">
@@ -66,7 +65,7 @@
             </form>
         </li>
         <li class="dropdown">
-            <a href="" class="dropdown-toggle user" data-toggle="dropdown"> <img src="../assets/images/people/8.jpg" alt="" class="img-circle" style="width:35px;height:35px"/><span class="hidden-xs hidden-sm"> &nbsp; Alireza Saberi </span> <span class="caret"></span></a>
+            <a href="" class="dropdown-toggle user" data-toggle="dropdown"> <img src="../assets/images/people/35/8.jpg" alt="" class="img-circle" style="width:35px;height:35px"/><span class="hidden-xs hidden-sm"> &nbsp; {{ user.name }} {{user.surname}} </span> <span class="caret"></span></a>
             <ul class="dropdown-menu list pull-right ">
                 <li><a href="#">Your Profile <i class="fa fa-user pull-right"></i></a></li>
                 <li><a href="#">Edit Account <i class="fa fa-pencil pull-right"></i></a></li>
@@ -77,112 +76,36 @@
     </ul>
 </div>
 
-
-
 	
-	<div id="menu" class="hidden-print hidden-xs">
+<div id="menu" class="hidden-print hidden-xs">
 	<div class="sidebar sidebar-inverse">
 		<div class="user-profile media innerAll">
-			<a href="" class="pull-left"><img src="../assets/images/people/35/8.jpg" alt="" class="img-circle"><span class="badge badge-primary">4</span></a>
+			<a href="" class="pull-left"><img src="../assets/images/people/35/8.jpg" alt="" class="img-circle" ><span class="badge badge-primary">4</span></a>
 			<div class="media-body">
-				<a href="" class="strong">Alireza Saberi</a>
+				<a href="" class="strong">{{user.name}} {{user.surname}}</a>
 				<p class="text-success"><i class="fa fa-fw fa-circle"></i> Online</p>
 			</div>
 		</div>
 		<div class="sidebarMenuWrapper">
 			<ul class="list-unstyled">
-				<li>&nbsp</li>
-				<li><a href="dashboard.html"><i class=" icon-projector-screen-line"></i><span>Dashboard</span></a></li>
-				<li class="active"><a href="pricing_tables.html?lang=en"><i class="  icon-dollar"></i><span>Order a Card</span></a></li>
-				<li><a href="portfolio.html?lang=en"><i class=" icon-flip-camera-fill"></i><span>Card Studio</span></a></li>
-				<li><a href="contacts.html?lang=en"><i class="icon-group"></i><span>Stacks</span></a></li>
+                <li>&nbsp</li>
+				<li ui-sref-active="active"><a ui-sref="dash"><i class=" icon-projector-screen-line"></i><span>Dashboard</span></a></li>
+		
+				<li ui-sref-active="active"><a ui-sref="pricing"><i class="  icon-dollar"></i><span>Order a Card</span></a></li>
+				<li ui-sref-active="active"><a ui-sref="studio"><i class=" icon-flip-camera-fill"></i><span>Card Studio</span></a></li>
+				<li ui-sref-active="active"><a ui-sref="contacts"><i class="icon-group"></i><span>Stacks</span></a></li>
+				
+			
 			</ul>
-			<br><br>
+            <br><br>
             <button class="btn btn-info" style="text-align:center; margin-left:50px">
                 <i class="fa fa-sign-out"></i>
                 Singout</button>
 		</div>
 	</div>
 </div>
-<div id="content">
-		<div class="heading-buttons bg-white border-bottom innerAll">
-			<h1 class="content-heading padding-none pull-left">Order a Card</h1>
-			<div class="clearfix"></div>
-		</div>
 
-<div class="innerAll">
-
-
-		<div class="table-pricing-3">
-	<ul class="list-unstyled row">
-		<li class="col-md-4">
-			<div class="innerAll">
-				<h3>Starter</h3>
-				<div class="body">
-					<div class="price">
-						&dollar;36
-					</div>
-				</div>
-				<div class="features">
-					<ul>
-						<li>Per 100 business cards </li>
-						<li>Single side prints</li>
-						<li>Free Web and Mobile App</li>
-					</ul>
-				</div>
-				<div class="footer">
-					<a href="#" class="btn btn-success">Get Started</a>
-				</div>
-			</div>
-		</li>
-		<li class="col-md-4 active">
-			<div class="innerAll">
-				<h3>Silver</h3>
-				<div class="body">
-					<div class="price">
-						<span class="figure">&dollar;50</span>
-					</div>
-				</div>
-				<div class="features">
-					<ul>
-						<li>Per 150 business cards</li>
-						<li>Double side prints</li>
-						<li>Free Web and Mobile App</li>
-						<li>Ability to send promotions</li>
-					</ul>
-				</div>
-				<div class="footer">
-					<a href="#" class="btn btn-success">Get Started</a>
-				</div>
-			</div>
-		</li>
-		<li class="col-md-4">
-			<div class="innerAll">
-				<h3>Gold</h3>
-				<div class="body">
-					<div class="price">
-						<span class="figure">&dollar;60</span>
-					</div>
-				</div>
-				<div class="features">
-					<ul>
-						<li>Per 300 business cards</li>
-						<li>Double side prints</li>
-						<li>High quality papers</li>
-						<li>Free Web and Mobile App</li>
-						<li>Ability to send promotions</li>
-					</ul>
-				</div>
-				<div class="footer">
-					<a href="#" class="btn btn-success">Get Started</a>
-				</div>
-			</div>
-		</li>
-		<div class="clearfix"></div>
-	</ul>
-</div>
-
-		<!-- // Content END -->
+<div ui-view></div>
 		
 		<div class="clearfix"></div>
 		<!-- // Sidebar menu & content wrapper END -->
@@ -220,14 +143,32 @@
 	var themerPrimaryColor = primaryColor;
 	</script>
 	
-	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
 <script src="../assets/components/plugins/nicescroll/jquery.nicescroll.min.js?v=v1.2.3"></script>
 <script src="../assets/components/plugins/breakpoints/breakpoints.js?v=v1.2.3"></script>
 <script src="../assets/components/core/js/animations.init.js?v=v1.2.3"></script>
+<!--script src="../assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v1.2.3"></script-->
+<!--script src="../assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v1.2.3"></script-->
+<!--script src="../assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v1.2.3"></script-->
+<!--script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v1.2.3"></script-->
+<!--script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-simple.init.js?v=v1.2.3"></script-->
+<!--script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-simple-bars.init.js?v=v1.2.3"></script-->
+<script src="../assets/components/modules/admin/widgets/widget-chat/assets/js/widget-chat.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/charts/easy-pie/assets/lib/js/jquery.easy-pie-chart.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/charts/easy-pie/assets/custom/easy-pie.init.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/widgets/widget-scrollable/assets/js/widget-scrollable.init.js?v=v1.2.3"></script>
 <script src="../assets/components/plugins/holder/holder.js?v=v1.2.3"></script>
 <script src="../assets/components/core/js/sidebar.main.init.js?v=v1.2.3"></script>
 <script src="../assets/components/core/js/sidebar.collapse.init.js?v=v1.2.3"></script>
 <script src="../assets/components/helpers/themer/assets/plugins/cookie/jquery.cookie.js?v=v1.2.3"></script>
-<script src="../assets/components/core/js/core.init.js?v=v1.2.3"></script>	
+<script src="../assets/components/core/js/core.init.js?v=v1.2.3"></script>
+<script src="../assets/scripts/angular.js"></script>
+<script src="../assets/scripts/angular-ui-router.js"></script>
+<script src="app/ccApp.js"></script>
+<script src="app/controllers/_User.js"></script>
+<!--script scr="app/controllers/userFactory.js"></script-->
 </body>
 </html>
