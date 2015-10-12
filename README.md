@@ -1,5 +1,6 @@
-# Front-End Mockup
+# Front-End Mockup: 
 This is front-end MVP of Card Coffer  for SWMontreal
+This project has been stoped,and was my first public try on AngularJS
 
 
 	
